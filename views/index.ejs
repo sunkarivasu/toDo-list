@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!-- bootstrap cnd -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- stylesheet scripts -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- jquery scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- javascripts scripts -->
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <h2 class="date"><%= title %></h2>
+    <div >
+        <ul class="list-items">
+            <% if(itemList.length>0){ %>
+                <li class="item item-0 top-item"><input class="checkbox c0" type="checkbox"><%= itemList[0]%></li>
+            <% } for(var i=1;i<itemList.length;i++){%>
+                <li class="item item-<%=i%>"><input class="checkbox c<%=i%>" type="checkbox"><%= itemList[i]%></li>
+            <% } if(itemList.length==0) { %>
+                <li class="item bottom-item top-item">
+                    <% if(title=="work"){%>
+                        <form  action="/work" method="post">
+                    <%}else{%>
+                        <form  action="/" method="post">
+                    <%}%>
+                    <%- include("item")%>
+                </li>
+            <% } else {%>
+                <li class="item bottom-item">
+                    <% if(title=="work"){%>
+                        <form  action="/work" method="post">
+                    <%}else{%>
+                        <form  action="/" method="post">
+                    <%}%>
+                    <%- include("item")%>
+                </li>
+            <% } %>
+        </ul>
+        
+    </div>
+</body>
+</html>
