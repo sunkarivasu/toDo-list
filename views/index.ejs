@@ -14,32 +14,36 @@
     <!-- jquery scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+    <!-- ajax cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <!-- javascripts scripts -->
     <script src="js/index.js"></script>
+
 </head>
 <body>
-    <h2 class="date"><%= title %></h2>
-    <div >
+    <div class="container">
+        <h2 class="date"><%= title %></h2>
         <ul class="list-items">
             <% if(itemList.length>0){ %>
-                <li class="item item-0 top-item"><input class="checkbox c0" type="checkbox"><%= itemList[0]%></li>
+                <li class="item item-<%=itemList[0]._id%> top-item"><form class="checkbox-form" action="/delete<%=title%>" method="POST"><input class="checkbox c<%=itemList[0]._id%>" type="checkbox" onchange="this.form.submit()"><input type="hidden" value="<%=itemList[0]._id%>" name="number"></form><%= itemList[0].name%></li>
             <% } for(var i=1;i<itemList.length;i++){%>
-                <li class="item item-<%=i%>"><input class="checkbox c<%=i%>" type="checkbox"><%= itemList[i]%></li>
+                <li class="item item-<%=itemList[i]._id%>"><form class="checkbox-form" action="/delete<%=title%>" method="POST"><input class="checkbox c<%=itemList[i]._id%>"  type="checkbox" onchange="this.form.submit()"><input type="hidden" value="<%=itemList[0]._id%>" name="number"></form><%= itemList[i].name%></li>
             <% } if(itemList.length==0) { %>
-                <li class="item bottom-item top-item">
-                    <% if(title=="work"){%>
-                        <form  action="/work" method="post">
-                    <%}else{%>
+                <li class="item  bottom-item top-item">
+                    <% if(title=="Today"){%>
                         <form  action="/" method="post">
+                    <%}else{%>
+                        <form  action="/<%=title%>" method="post">
                     <%}%>
                     <%- include("item")%>
                 </li>
             <% } else {%>
                 <li class="item bottom-item">
-                    <% if(title=="work"){%>
-                        <form  action="/work" method="post">
+                    <% if(title=="Today"){%>
+                        <form   action="/" method="post">
                     <%}else{%>
-                        <form  action="/" method="post">
+                        <form   action="/<%=title%>" method="post">
                     <%}%>
                     <%- include("item")%>
                 </li>
