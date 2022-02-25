@@ -9,7 +9,7 @@ const date = require(__dirname+"/date");
 
 const app = express();
 
-$PORT = process.env.PORT || 3000
+PORT = process.env.PORT || 3000
 
 mongoose.connect("mongodb+srv://admin-vasu:vasu%40143@cluster0.ypfh3.mongodb.net/ToDoListDB",function(err)
 {
@@ -199,7 +199,7 @@ app.post("/:customListName",function(req,res)
 
 
 
-app.listen($PORT,function()
+app.listen(PORT,function()
 {
     console.log(`server is running on port ${PORT}`);
 });
