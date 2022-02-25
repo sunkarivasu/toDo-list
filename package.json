@@ -4,5 +4,23 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "mongoose": "^6.2.3"
-  }
+  },
+  "name": "12_todolist",
+  "version": "1.0.0",
+  "description": "Todo App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunkarivasu/toDo-list.git"
+  },
+  "author": "Vasu Sunkari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunkarivasu/toDo-list/issues"
+  },
+  "homepage": "https://github.com/sunkarivasu/toDo-list#readme"
 }
