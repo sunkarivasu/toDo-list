@@ -28,7 +28,7 @@
             <% if(itemList.length>0){ %>
                 <li class="item item-<%=itemList[0]._id%> top-item"><form class="checkbox-form" action="/delete<%=title%>" method="POST"><input class="checkbox c<%=itemList[0]._id%>" type="checkbox" onchange="this.form.submit()"><input type="hidden" value="<%=itemList[0]._id%>" name="number"></form><%= itemList[0].name%></li>
             <% } for(var i=1;i<itemList.length;i++){%>
-                <li class="item item-<%=itemList[i]._id%>"><form class="checkbox-form" action="/delete<%=title%>" method="POST"><input class="checkbox c<%=itemList[i]._id%>"  type="checkbox" onchange="this.form.submit()"><input type="hidden" value="<%=itemList[0]._id%>" name="number"></form><%= itemList[i].name%></li>
+                <li class="item item-<%=itemList[i]._id%>"><form class="checkbox-form" action="/delete<%=title%>" method="POST"><input class="checkbox c<%=itemList[i]._id%>"  type="checkbox" onchange="this.form.submit()"><input type="hidden" value="<%=itemList[i]._id%>" name="number"></form><%= itemList[i].name%></li>
             <% } if(itemList.length==0) { %>
                 <li class="item  bottom-item top-item">
                     <% if(title=="Today"){%>
