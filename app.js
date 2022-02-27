@@ -15,7 +15,7 @@ const app = express();
 
 PORT = process.env.PORT || 3000
 
-mongoose.connect("mongodb+srv://"+process.env.USERID+":"+process.env.PASSWORD+"@cluster0.ypfh3.mongodb.net/ToDoListDB",function(err)
+mongoose.connect("mongodb+srv://admin-vasu:vasu%40143@cluster0.ypfh3.mongodb.net/ToDoListDB",function(err)
 {
     if(!err)
         console.log("connected to database");
