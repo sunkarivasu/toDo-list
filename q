@@ -1,0 +1,41 @@
+[33mcommit ff9412be8a5c514ce0a30a3659f8332063ee9462[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: sunkari vasu <sunkarivasu1@gmail.com>
+Date:   Sun Feb 27 14:55:13 2022 +0530
+
+    added .env file
+
+[33mcommit 44263921c57dcf369b971b96835dedca2c54662e[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: sunkari vasu <sunkarivasu1@gmail.com>
+Date:   Sat Feb 26 20:03:38 2022 +0530
+
+    rectified delete problem
+
+[33mcommit 6c53ab32183c867d7fd98e3a28ffee05330da022[m
+Author: sunkari vasu <sunkarivasu1@gmail.com>
+Date:   Fri Feb 25 09:52:29 2022 +0530
+
+    clear variable name error
+
+[33mcommit 86ce6c0548e83a4e46f2756f44f463ab69ab5fa8[m
+Author: sunkari vasu <sunkarivasu1@gmail.com>
+Date:   Fri Feb 25 09:48:06 2022 +0530
+
+    Added PORT Env Var
+
+[33mcommit 08cb91a9ff8edfc33ac9ee791c4f303231e91dbb[m
+Author: sunkari vasu <sunkarivasu1@gmail.com>
+Date:   Fri Feb 25 09:43:04 2022 +0530
+
+    Updated Package.json
+
+[33mcommit 908e493835684684eb6a0c822c8bc014e9561093[m
+Author: sunkari vasu <sunkarivasu1@gmail.com>
+Date:   Thu Feb 24 19:25:00 2022 +0530
+
+    version-1
+
+[33mcommit e755d8e77f62b863cc05b0c37d123924875cba90[m
+Author: sunkari vasu <sunkarivasu1@gmail.com>
+Date:   Sat Feb 19 21:26:21 2022 +0530
+
+    initial commit
