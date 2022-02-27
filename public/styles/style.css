@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    margin: 5% auto;
+    margin: 5% auto 2% auto;
     background-color: #E4E9FD;
     background-image:-webkit-linear-gradient(
         65deg, #A683E3 50%, #E4E9FD 50%
@@ -171,4 +171,16 @@ input:focus
 {
 
 } */
+
+.container
+{
+    min-height: 82vh;
+}
+
+footer
+{
+    font-size: 1.1em;
+    position: static;
+    bottom: 0;
+}
 
